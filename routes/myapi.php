@@ -11,3 +11,6 @@ $router->get('/api/banner/{id}', 'BannerController@getBanner');
 $router->get('/api/goods/getnewgoods', 'GoodsController@getNewGoods');
 
 $router->get('/api/theme/getthemes', 'ThemeController@getThemes');
+
+$router->get('/api/token/getCode', 'TokenController@getCode');
+$router->get('/api/token/setCode', 'TokenController@setCode');
