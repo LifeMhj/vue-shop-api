@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of the overtrue/laravel-wechat.
  *
@@ -7,6 +8,7 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
+
 return [
     /*
      * 默认配置，将会合并到各模块中
@@ -16,10 +18,12 @@ return [
          * 指定 API 调用返回结果的类型：array(default)/collection/object/raw/自定义类名
          */
         'response_type' => 'array',
+
         /*
          * 使用 Laravel 的缓存系统
          */
         'use_laravel_cache' => true,
+
         /*
          * 日志配置
          *
@@ -32,6 +36,7 @@ return [
             'file' => env('WECHAT_LOG_FILE', storage_path('logs/wechat.log')),
         ],
     ],
+
     /*
      * 路由配置
      */
@@ -48,6 +53,7 @@ return [
         //     ],
         // ],
     ],
+
     /*
      * 公众号
      */
@@ -56,7 +62,8 @@ return [
             'app_id' => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'wxbb60510a67a531e2'),         // AppID
             'secret' => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', '1cf83fa5f81de57812b3340a39e96764'),    // AppSecret
             'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', '1a96f70b9b285b253662b6bd81b55a73'),           // Token
-            'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', 'zGKk4kXEsAeOJKEqkaqkvU74nEG9q4wZuaya1Y6UiAT'),                 // EncodingAESKey
+            'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),                 // EncodingAESKey
+
             /*
              * OAuth 配置
              *
@@ -69,6 +76,7 @@ return [
             // ],
         ],
     ],
+
     /*
      * 开放平台第三方平台
      */
@@ -80,6 +88,7 @@ return [
     //         'aes_key' => env('WECHAT_OPEN_PLATFORM_AES_KEY', ''),
     //     ],
     // ],
+
     /*
      * 小程序
      */
@@ -91,6 +100,7 @@ return [
     //         'aes_key' => env('WECHAT_MINI_PROGRAM_AES_KEY', ''),
     //     ],
     // ],
+
     /*
      * 微信支付
      */
@@ -106,6 +116,7 @@ return [
     //     ],
     //     // ...
     // ],
+
     /*
      * 企业微信
      */
