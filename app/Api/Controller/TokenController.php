@@ -8,7 +8,8 @@ class TokenController
 {
     public function getCode()
     {
-        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxbb60510a67a531e2&redirect_uri=http://a.mahuajiao.com&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';
+        $backurl = urlencode("http://a.mahuajiao.com");
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxbb60510a67a531e2&redirect_uri='+$backurl+'&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';
         header('Location: ' . $url);
         exit;
 
